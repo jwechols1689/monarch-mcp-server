@@ -1,5 +1,5 @@
 [build]
-installCommand = "pip install -e ."
+installCommand = "pip install -e . && pip show monarch-mcp-server"
 
 [deploy]
-startCommand = "python -m monarch_mcp_server.server"
+startCommand = "PYTHONPATH=/app/src python -m monarch_mcp_server.server"
