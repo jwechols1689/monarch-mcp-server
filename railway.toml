@@ -1,0 +1,5 @@
+[build]
+installCommand = "pip install ."
+
+[deploy]
+startCommand = "monarch-mcp-server"
