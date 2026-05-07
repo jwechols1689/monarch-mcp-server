@@ -27,7 +27,7 @@ def main() -> None:
     """Main entry point for the server."""
     logger.info("Starting Monarch Money MCP Server...")
     try:
-        mcp.run(transport="sse", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+        mcp.run(transport="sse")
     except Exception as e:
         logger.error(f"Failed to run server: {str(e)}")
         raise
