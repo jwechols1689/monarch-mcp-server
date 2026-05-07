@@ -2,4 +2,4 @@
 installCommand = "pip install ."
 
 [deploy]
-startCommand = "monarch-mcp-server"
+startCommand = "python -m monarch_mcp_server.server"
