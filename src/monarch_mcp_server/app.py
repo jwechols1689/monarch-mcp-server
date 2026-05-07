@@ -1,6 +1,7 @@
 """FastMCP application instance and entry point."""
 
 import logging
+import os
 
 from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP
@@ -26,7 +27,7 @@ def main() -> None:
     """Main entry point for the server."""
     logger.info("Starting Monarch Money MCP Server...")
     try:
-        mcp.run()
+        mcp.run(transport="sse", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
     except Exception as e:
         logger.error(f"Failed to run server: {str(e)}")
         raise
