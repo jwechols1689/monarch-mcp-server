@@ -1,1 +1,1 @@
-web: monarch-mcp-server
+web: pip install -e . && monarch-mcp-server
