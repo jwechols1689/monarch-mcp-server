@@ -20,7 +20,7 @@ mcp = FastMCP("Monarch Money MCP Server")
 import monarch_mcp_server.tools  # noqa: E402, F401
 
 # Export for `mcp run`
-app = mcp.sse_app()
+app = mcp.sse_app().sse_app()
 
 
 def main() -> None:
