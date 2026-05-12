@@ -20,7 +20,7 @@ mcp = FastMCP("Monarch Money MCP Server")
 import monarch_mcp_server.tools  # noqa: E402, F401
 
 # Export for `mcp run`
-app = mcp.sse_app().sse_app()
+app = mcp.sse_app()
 
 
 def main() -> None:
@@ -28,10 +28,5 @@ def main() -> None:
     logger.info("Starting Monarch Money MCP Server...")
     try:
         mcp.run(transport="sse")
-    except Exception as e:
-        logger.error(f"Failed to run server: {str(e)}")
-        raise
+    except Exception
 
-
-if __name__ == "__main__":
-    main()
